@@ -15,7 +15,7 @@ jobs:
     steps:
     # Checkout Code
     - name: Checkout Code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     # Setup Java 17
     - name: Set up JDK 17
       uses: actions/setup-java@v4
@@ -34,7 +34,7 @@ jobs:
       run: mvn install package
     # Upload artifact
     - name: Upload JAR Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: health-check-app-jar
         path: target/health-check-app-1.0-SNAPSHOT.jar
